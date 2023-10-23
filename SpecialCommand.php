@@ -259,7 +259,7 @@
     ): void {
 
 
-            // Цикл для чекера bankiru
+            // Цикл для чекера
             if (null !== $creditApplicationRepository->findChunkWithRegistrationModeChecker()) {
                 $limit = 500;
                 $i = 0;
@@ -300,7 +300,7 @@
             echo PHP_EOL;
 
 
-        // Второй цикл для Esia. Из esia_request_person_data берет дату и ФИ из тела ответа,
+        // Второй цикл для E. Из e_request_person_data берет дату и ФИ из тела ответа,
         // и если в этот день был зарегестрирован клиент с такими фио то делает запись в reg_mode Account таблицу
             if (null !== $esiaRequestPersonDataRepository->findChunkOfAll()) {
                 $limit = 500;
@@ -336,11 +336,11 @@
                         }
                     }
                     $i++;
-                    echo $i * 500 . ' есия акаунтов из второго цикла заполнены.';
+                    echo $i * 500 . ' e акаунтов из второго цикла заполнены.';
                     echo PHP_EOL;
                 } while (!empty($esiaRequestPersonDataRepository->findChunkOfAll($i * $limit, $limit)));
             }
-        echo 'Вторая часть аккаунтов зарегистрированных через Esia заполнена';
+        echo 'Вторая часть аккаунтов зарегистрированных через E заполнена';
         echo PHP_EOL;
 
 
