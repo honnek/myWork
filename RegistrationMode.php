@@ -11,10 +11,10 @@ class RegistrationMode implements ValueInterface
     /** @var int Обычный способ регистрации */
     public const USUAL = 1;
 
-    /** @var int Способ регистрации через ЕСИА */
+    /** @var int Способ регистрации через Е */
     public const ESIA = 2;
 
-    /** @var int Способ регистрации через банки ру чекер */
+    /** @var int Способ регистрации через Ч */
     public const CHECKER = 3;
 
     /**
@@ -63,8 +63,8 @@ class RegistrationMode implements ValueInterface
     {
         return [
             self::USUAL => 'Обычная регистрация',
-            self::ESIA => 'Регистрация через ЕСИА',
-            self::CHECKER => 'Регистрация через Банки Ру чекер',
+            self::ESIA => 'Регистрация через ЕС',
+            self::CHECKER => 'Регистрация через Ч',
         ];
     }
 
@@ -143,7 +143,7 @@ class RegistrationMode implements ValueInterface
     }
 
     /**
-     * Создает и возвращает объект RegistrationMode с кодом ESIA
+     * Создает и возвращает объект RegistrationMode с кодом E
      *
      * @return RegistrationMode
      */
@@ -153,7 +153,7 @@ class RegistrationMode implements ValueInterface
     }
 
     /**
-     * Создает и возвращает объект RegistrationMode с кодом CHECKER
+     * Создает и возвращает объект RegistrationMode с кодом Ч
      *
      * @return RegistrationMode
      */
